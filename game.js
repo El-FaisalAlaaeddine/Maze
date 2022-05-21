@@ -35,11 +35,15 @@ function crossedBorder(){
             
         }}
         
+        function alertMSG(){
+            alert("Caught you, No Cheating :)")
+        }
+
         initial.addEventListener("click", function(){
                 boolean = true;
                 stat.innerHTML = "Current score: " + score
                 game.addEventListener("mouseleave", function(){
-                    alert("Caught you, No Cheating :)")
+                   alertMSG()
                 })
                 for(var i = 0; i < elements.length; i++){
                     elements[i].addEventListener("mouseover",crossedBorder);
