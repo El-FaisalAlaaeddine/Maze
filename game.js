@@ -35,7 +35,21 @@ function crossedBorder(){
             
         }}
         
-      
+        initial.addEventListener("click", function(){
+                boolean = true;
+                stat.innerHTML = "Current score: " + score
+                game.addEventListener("mouseleave", function(){
+                    alert("Caught you, No Cheating :)")
+                })
+                for(var i = 0; i < elements.length; i++){
+                    elements[i].addEventListener("mouseover",crossedBorder);
+                }
+                
+                initial.addEventListener("click",reTry)
+            
+        })
+
+        ending.addEventListener("mouseover", Winning)
 
    
 })
