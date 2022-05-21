@@ -7,7 +7,7 @@ var ending = document.getElementById('end')
 var elements = document.getElementsByClassName('boundary');
 var game = document.getElementById('game')
 var hover = 0;
-var move = 0
+
 
 function crossedBorder(){
     for(var i = 0; i < elements.length; i++){
@@ -15,10 +15,14 @@ function crossedBorder(){
     }
     score -= 10
     stat.innerHTML = "Oops, You lost :( , Click S to start again, Current score "+ score
+    for(var i = 0; i < elements.length; i++){
+        elements[i].removeEventListener('mouseover',crossedBorder)
+    }
+    
 }
     function reTry(){
         for(var i = 0; i < elements.length; i++)
-        {
+            {
              elements[i].style.backgroundColor = "#eeeeee"
             }  
             stat.innerHTML = 'This is a reset, last score was: ' + score
