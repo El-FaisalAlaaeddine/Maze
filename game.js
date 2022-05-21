@@ -24,7 +24,18 @@ function crossedBorder(){
             stat.innerHTML = 'This is a reset, last score was: ' + score
             boolean = true
      }
-   
+    function Winning(){
+        if (boolean === true){
+            score += 5
+            stat.innerHTML = "Bravo!! You Won, Current score:  " + score;
+            hover+=1
+            if (hover === 1){
+                ending.removeEventListener("mouseover", Winning)
+            }
+            
+        }}
+        
+      
 
    
 })
