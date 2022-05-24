@@ -110,3 +110,15 @@ neighboring elements.  Necessary to avoid giving ids to the boundary divs
 	height: 150px;
 	width: 98px;
 }
+.stats{
+	text-align: center;
+}
+.container-2{
+	flex-direction: row;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+h2{
+	padding: 30px;
+}
